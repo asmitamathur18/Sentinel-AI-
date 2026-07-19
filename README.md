@@ -1,96 +1,113 @@
-# Sentinel-AI
+# 🛡️ Sentinel-AI
 
-An AI-powered surveillance system that detects and monitors suspicious activities in real time using computer vision and a full-stack dashboard.
+**Sentinel-AI** is an AI-powered real-time surveillance and threat monitoring system designed to enhance security through computer vision and intelligent event analysis.
 
-Sentinel-AI leverages deep learning to analyze live video streams, identify suspicious events, and provide administrators with actionable insights through an interactive dashboard.
-
----
-
-## Features
-
-- Real-time video surveillance
-- AI-based suspicious activity detection
-- Live monitoring dashboard
-- Event logging and tracking
-- Instant alerts for suspicious activities
-- Responsive web interface
-- Visual analytics and monitoring
+The system uses **YOLO-based object detection** to analyze surveillance footage, identify potential security threats, and provide real-time monitoring through an interactive dashboard.
 
 ---
 
-## Technologies Used
+## 🚀 Features
+
+- Real-time object detection using YOLO
+- Upload images and videos for analysis
+- Live webcam surveillance
+- AI-powered detection dashboard
+- Detection confidence scores
+- Bounding box visualization
+- Object count statistics
+- Download processed results
+
+---
+
+## 🛠️ Tech Stack
 
 ### Frontend
-- HTML
-- CSS
-- JavaScript
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
 
 ### Backend
+- FastAPI
 - Python
-- Flask
 
-### AI / Computer Vision
+### AI & Computer Vision
+- Ultralytics YOLO
 - OpenCV
-- YOLO
-- Deep Learning
 
-### Database
-- Firebase
+### Database & Storage
+- Supabase
+
+### Deployment
+- Vercel
+- Railway
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 
-```
+```text
 Sentinel-AI/
 │
-├── backend/
 ├── frontend/
-├── models/
-├── static/
-├── templates/
-├── app.py
-├── requirements.txt
-└── README.md
+│   ├── app/
+│   ├── components/
+│   ├── public/
+│   └── package.json
+│
+├── backend/
+│   ├── app/
+│   ├── models/
+│   ├── uploads/
+│   ├── outputs/
+│   ├── main.py
+│   └── requirements.txt
+│
+├── README.md
+└── .gitignore
 ```
 
 ---
 
-## How It Works
+## ⚙️ How It Works
 
-1. Capture live video from a surveillance camera.
-2. Process each frame using the computer vision model.
-3. Detect suspicious activities in real time.
-4. Display alerts and analytics on the dashboard.
-5. Store event logs for future monitoring and investigation.
-
----
-
-## Key Features
-
-- Real-time AI inference
-- Object detection using computer vision
-- Interactive monitoring dashboard
-- Automated event logging
-- Scalable surveillance architecture
-- User-friendly interface
+1. Upload an image or video, or connect a live camera.
+2. The backend processes the input using a YOLO object detection model.
+3. Detected objects are highlighted with bounding boxes and confidence scores.
+4. Detection statistics are displayed on the dashboard.
+5. Processed media and detection summaries can be downloaded.
 
 ---
 
-## Future Enhancements
+## 📊 Current Capabilities
 
-- Multi-camera surveillance support
+- Person Detection
+- Vehicle Detection
+- Bag Detection
+- Bicycle Detection
+- Animal Detection
+- Multiple Object Tracking
+
+---
+
+## 🔮 Future Enhancements
+
+- Suspicious activity detection
+- Intrusion detection
+- Loitering detection
+- Crowd density analysis
+- Unattended object detection
+- Weapon detection
+- Fire and smoke detection
 - Face recognition
-- License plate recognition
-- Cloud deployment
 - Email and SMS alerts
-- Heatmap visualization
-- Mobile application support
-- Role-based authentication
+- Cloud deployment
+- Multi-camera monitoring
+- AI-generated incident reports using LLMs
 
 ---
-
-## Installation
+## 📦 Installation
 
 Clone the repository
 
@@ -104,21 +121,29 @@ Navigate to the project
 cd Sentinel-AI
 ```
 
-Install dependencies
+### Backend
 
 ```bash
+cd backend
+
 pip install -r requirements.txt
+
+uvicorn main:app --reload
 ```
 
-Run the application
+### Frontend
 
 ```bash
-python app.py
+cd frontend
+
+npm install
+
+npm run dev
 ```
 
 ---
 
-## Author
+## 👩‍💻 Author
 
 **Asmita Mathur**
 
@@ -126,6 +151,6 @@ GitHub: https://github.com/asmitamathur18
 
 ---
 
-## License
+## 📄 License
 
-This project is intended for educational and research purposes.
+This project is intended for educational, research, and portfolio purposes.
